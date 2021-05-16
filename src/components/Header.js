@@ -25,8 +25,8 @@ function Header() {
       <RightMenu>
         <a href="#">Shop</a>
         <a href="#">Tesla Account</a>
-        <CustomMenu onClick={() => setBurgerState(!burgerState)}></CustomMenu>
       </RightMenu>
+      <CustomMenu onClick={() => setBurgerState(!burgerState)}></CustomMenu>
       <BurgerNav show={burgerState}>
         <CloseWrapper>
           <CustomeClose onClick={() => setBurgerState(false)} />
@@ -60,6 +60,12 @@ function Header() {
         </li>
         <li>
           <a href="#">Semi</a>
+        </li>
+        <li>
+          <a href="#">Shop</a>
+        </li>
+        <li>
+          <a href="#">Tesla Account</a>
         </li>
       </BurgerNav>
     </Container>
@@ -104,6 +110,9 @@ const RightMenu = styled.div`
     font-weight: 600;
     text-transform: uppercase;
     margin-right: 10px;
+  }
+  @media (max-width: 375px) {
+    display: none;
   }
 `;
 const CustomMenu = styled(MenuIcon)`
